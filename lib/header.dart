@@ -1,47 +1,48 @@
 import 'package:flutter/material.dart';
 
-class Header extends StatelessWidget {
+class CustomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 375.0,
-      height: 76.0,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: 14.0),
-          Padding(
-            padding: EdgeInsets.only(left: 16.0),
-            child: Text(
-              'Тарифы и лимиты',
-              style: TextStyle(
-                fontSize: 20.0,
-                height: 24.0 / 20.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-                fontFamily: 'SF Pro Text',
-              ),
+    return MaterialApp(
+      home: Scaffold(
+        body: Padding(
+          padding: EdgeInsets.only(top: 320, left: 16, bottom: 12), // Отступы
+          child: Container(
+            width: 375,
+            height: 94,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'У вас подключено',
+                  style: TextStyle(
+                    fontSize: 20,
+                    height: 24 / 20,
+                    fontFamily: 'SF Pro Text',
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xFF000000),
+                  ),
+                ),
+                SizedBox(height: 8), // Отступ между текстами
+                Container(
+                  child: Text(
+                    'Подписки, автоплатежи и сервисы на которые\nвы подписались',
+                    style: TextStyle(
+                      fontSize: 14,
+                      height: 18 / 14,
+                      fontFamily: 'SF Pro Text',
+                      fontWeight: FontWeight.w500,
+                      color: Color(0x8C000000),
+                    ),
+                  ),
+                ),
+                // Другие виджеты внутри столбца
+              ],
             ),
           ),
-          SizedBox(height: 8.0),
-          Padding(
-            padding: EdgeInsets.only(left: 16.0),
-            child: Text(
-              'Для операций в Сбербанк Онлайн',
-              style: TextStyle(
-                fontSize: 14.0,
-                height: 18.0 / 14.0,
-                fontWeight: FontWeight.w500,
-                color: Color(0x8C000000),
-                fontFamily: 'SF Pro Text',
-              ),
-            ),
-          ),
-          SizedBox(height: 12.0),
-        ],
+        ),
       ),
     );
   }
 }
-
-

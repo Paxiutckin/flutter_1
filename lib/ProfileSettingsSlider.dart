@@ -10,13 +10,11 @@ class ProfileSettingsSlider extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                // Действия при нажатии на кнопку "Профиль"
               },
               child: Text('Профиль'),
             ),
             ElevatedButton(
               onPressed: () {
-                // Действия при нажатии на кнопку "Настройки"
               },
               child: Text('Настройки'),
             ),
@@ -24,7 +22,6 @@ class ProfileSettingsSlider extends StatelessWidget {
             Slider(
               value: 0.5,
               onChanged: (newValue) {
-                // Обработчик изменения ползунка
               },
               min: 0,
               max: 1,

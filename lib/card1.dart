@@ -106,7 +106,7 @@ void main() {
       body: Center(
         child: Padding(
           padding: EdgeInsets.only(left: 16.0),
-          child: Card1(), // Используем класс Card1 для создания виджета Card
+          child: Card1(),
         ),
       ),
     ),
